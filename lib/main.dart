@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:soundmates/features/app/presentation/app.dart';
 import 'package:soundmates/firebase_options.dart';
+import 'package:soundmates/utils/riverpod_observer.dart';
 
 void main() async {
   runZonedGuarded(() async {
@@ -22,7 +23,7 @@ void main() async {
       return true;
     };
 
-    runApp(const ProviderScope(child: App()));
+    runApp(ProviderScope(observers: [RiverpodObserver()], child: const App()));
   }, catchUnhandledExceptions);
 }
 
@@ -31,5 +32,5 @@ void catchUnhandledExceptions(Object error, StackTrace? stack) {
 }
 
 /*
-  TODO: runZonedGuarded to catch unhandeled exceptions and report them
+  TODO: initial setup
  */

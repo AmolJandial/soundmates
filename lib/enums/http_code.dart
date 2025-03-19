@@ -1,7 +1,10 @@
 enum HttpCode {
-  badRequest;
+  success(200),
+  badRequest(400),
+  unauthotized(401),
+  notFound(404);
 
-  int get statusCode => switch (this) {
-    HttpCode.badRequest => 404,
-  };
+  final int statusCode;
+
+  const HttpCode(this.statusCode);
 }

@@ -7,4 +7,3 @@ analyzer:
 linter:
   rules:
     prefer_const_constructors: true
-    avoid_dynamic_calls: true

@@ -1,12 +1,16 @@
 import 'dart:async';
+import 'dart:developer';
 import 'dart:ui';
 
+import 'package:beamer/beamer.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:soundmates/features/app/presentation/app.dart';
+import 'package:soundmates/features/app/views/views.dart';
 import 'package:soundmates/firebase_options.dart';
+import 'package:soundmates/utils/logger_config.dart';
 import 'package:soundmates/utils/riverpod_observer.dart';
 
 void main() async {
@@ -22,6 +26,9 @@ void main() async {
       catchUnhandledExceptions(error, stack);
       return true;
     };
+
+    await dotenv.load(fileName: '.env');
+    configLogger();
 
     runApp(ProviderScope(observers: [RiverpodObserver()], child: const App()));
   }, catchUnhandledExceptions);

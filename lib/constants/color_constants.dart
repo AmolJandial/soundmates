@@ -16,5 +16,8 @@ class ColorConstants {
   static const iconColor = Color(0xFF5F9EA0);
   static const highlightColor = Color(0xFFFFD700);
   static const subtleHighlightColor = Color(0xFFFFC0CB);
-  static const surfaceColor = Color.fromARGB(255, 175, 175, 175);
+  static const surfaceColor = Color.fromARGB(255, 205, 205, 205);
+  static const surfaceColorAlt = Color.fromARGB(255, 167, 167, 167);
+  static const onSurfaceColor = Color.fromARGB(255, 108, 108, 108);
+  static const transparent = Colors.transparent;
 }

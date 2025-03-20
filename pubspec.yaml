@@ -8,12 +8,15 @@ environment:
 
 dependencies:
   beamer: ^1.7.0
+  country_code_picker: ^3.2.0
+  dartx: ^1.2.0
   equatable: ^2.0.7
   firebase_analytics: ^11.4.4
   firebase_core: ^3.12.1
   firebase_crashlytics: ^4.3.4
   flutter:
     sdk: flutter
+  flutter_animate: ^4.5.2
   flutter_bloc: ^9.1.0
   flutter_dotenv: ^5.2.1
   flutter_hooks: ^0.21.2
@@ -21,7 +24,11 @@ dependencies:
   get_it: ^8.0.3
   hooks_riverpod: ^2.6.1
   hydrated_bloc: ^10.0.0
+  jiffy: ^6.3.2
+  loading_indicator: ^3.1.1
   logging: ^1.3.0
+  lottie: ^3.3.1
+  pinput: ^5.0.1
   shared_preferences: ^2.5.2
   vector_graphics: ^1.1.18
 
@@ -37,6 +44,7 @@ flutter:
   uses-material-design: true
   assets:
     - .env
+    - assets/anims/
     - path: assets/images/
       transformers:
         - package: vector_graphics_compiler

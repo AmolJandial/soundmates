@@ -10,6 +10,6 @@ class OnboardingBottomButton extends StatelessWidget {
         Beamer.of(context).beamToNamed('/auth');
       },
       child: const Text(StringConstants.onboardingBottomButton),
-    ).contraintWidth(context.maxHeight).withPaddingSmallAll();
+    ).constraintWidth(context.maxHeight).withPaddingSmallAll();
   }
 }

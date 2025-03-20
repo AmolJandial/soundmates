@@ -3,9 +3,11 @@ import 'dart:developer';
 import 'dart:ui';
 
 import 'package:beamer/beamer.dart';
+import 'package:equatable/equatable.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:soundmates/features/app/views/views.dart';
@@ -29,6 +31,8 @@ void main() async {
 
     await dotenv.load(fileName: '.env');
     configLogger();
+    EquatableConfig.stringify = true;
+    Animate.restartOnHotReload = true;
 
     runApp(ProviderScope(observers: [RiverpodObserver()], child: const App()));
   }, catchUnhandledExceptions);

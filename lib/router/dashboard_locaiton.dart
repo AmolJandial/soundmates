@@ -1,5 +1,6 @@
 import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
+import 'package:soundmates/dummy/dummy_page.dart';
 import 'package:soundmates/features/app/views/views.dart';
 import 'package:soundmates/features/auth/views/views.dart';
 import 'package:soundmates/utils/logger_config.dart';

@@ -3,11 +3,13 @@ import 'package:soundmates/utils/dimens.dart';
 
 extension WidgetX on Widget {
   Widget expand() => SizedBox.expand(child: this);
-  Widget contraintWidth(double width) => SizedBox(width: width, child: this);
+  Widget constraint(double width, double height) => SizedBox(width: width, height: height, child: this);
+  Widget constraintWidth(double width) => SizedBox(width: width, child: this);
   Widget withColor() => ColoredBox(color: Colors.amber, child: this);
   Widget withSafeArea() => SafeArea(child: this);
 
   Widget withPaddingSmallAll() => Padding(padding: const EdgeInsets.all(Dimens.pt8), child: this);
+  Widget withPaddingMediumAll() => Padding(padding: const EdgeInsets.all(Dimens.pt16), child: this);
   Widget withPaddingHorizontalSmall() =>
       Padding(padding: const EdgeInsets.symmetric(horizontal: Dimens.pt8), child: this);
 }

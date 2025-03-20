@@ -27,7 +27,7 @@ class OnboardingFeatures extends StatelessWidget {
           text,
           style: AppTextStyles.headlineSmall(),
           textAlign: TextAlign.center,
-        ).contraintWidth(context.maxWidth * 0.3),
+        ).constraintWidth(context.maxWidth * 0.3),
       ],
     );
   }
